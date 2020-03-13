@@ -2,9 +2,11 @@
 
 ## Bears. Beets. Battlestar Galactica.
 
-With this package, you can extend the extremely use Faker ([fzaninotto/faker](https://github.com/fzaninotto/Faker)) 
-package to seed your application with fake data using characters, companies, (and in a future release) locations from 
+With this package, you can extend the extremely useful Faker ([fzaninotto/faker](https://github.com/fzaninotto/Faker)) 
+Library to seed your application with fake data using characters, companies, (and in a future release) locations from 
 the hit TV series, The Office (US).
+
+This is vital for when we launch Dunder Mifflin Infinity <<2>> <<Point>> <<Oh>>!
 
 ### Installation
 
