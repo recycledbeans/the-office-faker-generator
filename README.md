@@ -40,7 +40,7 @@ $factory->define(Volunteer::class, function (Faker $faker) {
 
 The default usage above creates truly randomized first and last names, so you will end up with names like "Roy Kapoor" or
 "Jim Schrute". If you would like the have the first and last names be consistent with the characters on the show (which 
-is probably what most people would enjoy), you can use the person() method to return an object of a character's details.
+is probably what most people would enjoy), you can use the character() method to return an object of a character's details.
 
 ```php
 
@@ -49,7 +49,7 @@ $factory->define(Volunteer::class, function (Faker $faker) {
     // Add the TheOffice Provider so Faker starts using the methods within the provider
     $faker->addProvider(new \TheOfficeFaker\Provider\TheOffice($faker));
 
-    $character = $faker->person();
+    $character = $faker->character();
 
     return [
         'given_name' => $character->firstName,
