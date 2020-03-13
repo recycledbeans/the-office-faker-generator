@@ -87,6 +87,7 @@ class TheOffice extends Base
         'Here Comes Treble',
         'Dunmore High School',
         'WUPHF.com',
+        'Schrute Farms',
     ];
 
     public function name()
@@ -167,6 +168,11 @@ class TheOffice extends Base
         $person->email = strtolower($person->firstName) . '.' . strtolower($person->lastName) . '@dunder-mifflin.com';
 
         return $person;
+    }
+
+    public function company()
+    {
+        return $this->companyName();
     }
 
     public function companyName()

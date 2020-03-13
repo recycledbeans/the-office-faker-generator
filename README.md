@@ -69,7 +69,7 @@ Office. You can use these the same way you would use the normal companyName attr
 
 ```php
 // Michael Scott Paper Company, for instance
-$company = $faker->companyName; 
+$company = $faker->company; 
 ```
 
 ### Identified Areas of Improvement (I would love your help!)
