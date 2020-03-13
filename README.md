@@ -6,7 +6,7 @@ With this package, you can extend the extremely useful Faker ([fzaninotto/faker]
 Library to seed your application with fake data using characters, companies, (and in a future release) locations from 
 the hit TV series, The Office (US).
 
-This is vital for when we launch Dunder Mifflin Infinity <<2>> <<Point>> <<Oh>>!
+This is vital for when we launch Dunder Mifflin Infinity #2PointOh!
 
 ### Installation
 
