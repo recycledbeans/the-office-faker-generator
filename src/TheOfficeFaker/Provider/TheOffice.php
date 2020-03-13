@@ -105,7 +105,7 @@ class TheOffice extends Base
 
     protected function getOfficePerson()
     {
-        $employees = $this->maleNames + $this->femaleNames;
+        $employees = array_merge($this->maleNames, $this->femaleNames);
 
         return Base::randomElement($employees);
     }
