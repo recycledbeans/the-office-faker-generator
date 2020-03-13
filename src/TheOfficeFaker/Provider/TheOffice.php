@@ -103,11 +103,40 @@ class TheOffice extends Base
         return $this->getLastNameComponent($this->getOfficePerson());
     }
 
-    protected function getOfficePerson()
+    public function firstNameFemale()
     {
-        $employees = array_merge($this->maleNames, $this->femaleNames);
+        return $this->getFirstNameComponent($this->getOfficePerson('female'));
+    }
+
+    public function firstNameMale()
+    {
+        return $this->getFirstNameComponent($this->getOfficePerson('male'));
+    }
+
+    protected function getOfficePerson($sex = 'both')
+    {
+        switch ($sex) {
+            case 'male':
+                $employees = $this->maleNames;
+                break;
+            case 'female':
+                $employees = $this->femaleNames;
+                break;
+            default:
+                $employees = array_merge($this->maleNames, $this->femaleNames);
+        }
 
         return Base::randomElement($employees);
+    }
+
+    public function characterFemale()
+    {
+        return $this->character('female');
+    }
+
+    public function characterMale()
+    {
+        return $this->character('male');
     }
 
     protected function getLastNameComponent($value)
@@ -124,11 +153,11 @@ class TheOffice extends Base
         return $name[0];
     }
 
-    public function person()
+    public function character($sex = 'both')
     {
         $person = new \stdClass;
 
-        $name = $this->getOfficePerson();
+        $name = $this->getOfficePerson($sex);
 
         $person->name = $name;
         $person->firstName = $this->getFirstNameComponent($name);
