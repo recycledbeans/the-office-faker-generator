@@ -86,6 +86,7 @@ class TheOffice extends Base
         'Steamtown Mall',
         'Here Comes Treble',
         'Dunmore High School',
+        'Schrute Farms'
     ];
 
     public function name()
