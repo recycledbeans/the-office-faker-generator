@@ -168,6 +168,11 @@ class TheOffice extends Base
         return $person;
     }
 
+    public function company()
+    {
+        return $this->companyName();
+    }
+
     public function companyName()
     {
         return Base::randomElement($this->companies);
