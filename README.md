@@ -70,7 +70,7 @@ Office. You can use these the same way you would use the normal companyName attr
 $company = $faker->companyName; 
 ```
 
-#### Identified Areas of Improvement (I would love your help!)
+### Identified Areas of Improvement (I would love your help!)
 
 There is a short list of things I would like to improve or add in the near future to make this provider even better. If 
 you would like to help in this endeavor, please feel free to create a pull request. Even if you don't feel like coding, 
