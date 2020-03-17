@@ -88,6 +88,7 @@ class TheOffice extends Base
         'Dunmore High School',
         'WUPHF.com',
         'Schrute Farms',
+        'Serenity by Jan',
     ];
 
     public function name()
