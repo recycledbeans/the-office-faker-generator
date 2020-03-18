@@ -22,5 +22,8 @@
         "psr-4": {
             "TheOfficeFaker\\": "src/TheOfficeFaker/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
     }
 }
