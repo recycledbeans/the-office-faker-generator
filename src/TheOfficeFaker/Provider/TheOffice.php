@@ -2,94 +2,25 @@
 
 namespace TheOfficeFaker\Provider;
 
+use Faker\Generator;
 use Faker\Provider\Base;
+use TheOfficeFaker\Data\Companies;
+use TheOfficeFaker\Data\FemaleNames;
+use TheOfficeFaker\Data\MaleNames;
 
 class TheOffice extends Base
 {
-    protected $maleNames = [
-        'Michael Scott',
-        'Dwight Schrute',
-        'Ryan Howard',
-        'Andy Bernard',
-        'Robert California',
-        'Stanley Hudson',
-        'Kevin Malone',
-        'Jim Halpert',
-        'Oscar Martinez',
-        'Roy Anderson',
-        'Toby Flenderson',
-        'Creed Bratton',
-        'Darryl Philbin',
-        'Gabe Lewis',
-        'Clark Green',
-        'Pete Miller',
-        'David Wallace',
-        'Devon White',
-        'Danny Cordray',
-        'Lonny Collins',
-        'Jerry DiCanio',
-        'Hidetoshi Hasagawa',
-        'Gary Trundell',
-        'Nate Nickerson',
-        'Todd Packer',
-        'Charles Miner',
-        'Deangelo Vickers',
-        'Josh Porter',
-        'Ed Truck',
-        'Dan Gore',
-        'Troy Underbridge',
-        'Tony Gardner',
-        'Martin Nash',
-        'Philip Halpert',
-        'Luke Cooper',
-        'Mose Schrute',
-        'Robert Lipton',
-        'Walter Bernard',
-        'Bob Vance',
-        'Hank Tate',
-        'Billy Merchant',
-    ];
+    protected $maleNames;
+    protected $femaleNames;
+    protected $companies;
 
-    protected $femaleNames = [
-        'Pam Beesley',
-        'Meredith Palmer',
-        'Angela Martin',
-        'Phyllis Lapin',
-        'Jan Levinson',
-        'Kelly Kapoor',
-        'Erin Hannon',
-        'Holly Flax',
-        'Nellie Bertram',
-        'Jo Bennett',
-        'Cathy Simms',
-        'Karen Filippelli',
-        'Madge Madsen',
-        'Val Johnson',
-        'Jordan Garfield',
-        'Hannah Smoterich-Barr',
-        'Cecilia Halpert',
-        'Katy Moore',
-        'Isabel Poreba',
-        'Carole Stills',
-        'Donna Newton',
-        'Brenda Matlowe',
-        'Deborah Shoshlefski',
-    ];
-
-    protected $companies = [
-        'Dunder Mifflin',
-        'Sabre',
-        'Michael Scott Paper Company',
-        'Prince Family Paper',
-        'Saticoy Steel',
-        'Shoe-La-La',
-        'Steamtown Mall',
-        'Here Comes Treble',
-        'Dunmore High School',
-        'WUPHF.com',
-        'Schrute Farms',
-        'Serenity by Jan',
-    ];
+    public function __construct(Generator $generator)
+    {
+        parent::__construct($generator);
+        $this->maleNames = MaleNames::get();
+        $this->femaleNames = FemaleNames::get();
+        $this->companies = Companies::get();
+    }
 
     public function name()
     {
