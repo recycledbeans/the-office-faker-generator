@@ -165,8 +165,8 @@ class TheOffice extends Base
         $person->name = $name;
         $person->firstName = $this->getFirstNameComponent($name);
         $person->lastName = $this->getLastNameComponent($name);
-        $person->safeEmail = strtolower($person->firstName) . '.' . strtolower($person->lastName) . rand(0, 9999) . '@example.net';
-        $person->email = strtolower($person->firstName) . '.' . strtolower($person->lastName) . '@dunder-mifflin.com';
+        $person->safeEmail = strtolower($person->firstName).'.'.strtolower($person->lastName).rand(0, 9999).'@example.net';
+        $person->email = strtolower($person->firstName).'.'.strtolower($person->lastName).'@dunder-mifflin.com';
 
         return $person;
     }
