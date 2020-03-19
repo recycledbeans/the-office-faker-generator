@@ -1,5 +1,4 @@
-php:
-  preset: laravel
-  disabled:
-    - unused_use
-  risky: false
+preset: laravel
+disabled:
+  - unused_use
+risky: false
