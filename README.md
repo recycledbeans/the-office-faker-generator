@@ -65,11 +65,11 @@ $factory->define(Volunteer::class, function (Faker $faker) {
 ### Companies
 
 There is a small, but growing, list of fictional (and some Scranton-area) company names taken from episodes of The 
-Office. You can use these the same way you would use the normal companyName attribute.
+Office. You can use these the same way you would use the normal company attribute.
 
 ```php
 // Michael Scott Paper Company, for instance
-$company = $faker->companyName; 
+$company = $faker->company; 
 ```
 
 ### Identified Areas of Improvement (I would love your help!)
