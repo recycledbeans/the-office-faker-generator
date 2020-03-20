@@ -1,5 +1,7 @@
 # The Office Faker Generator (Provider)
 
+[![StyleCI](https://github.styleci.io/repos/246913160/shield?branch=master)](https://github.styleci.io/repos/246913160)
+
 ## Bears. Beets. Battlestar Galactica.
 
 With this package, you can extend the extremely useful Faker ([fzaninotto/faker](https://github.com/fzaninotto/Faker)) 
