@@ -19,6 +19,7 @@ class Companies implements DataInterface
             'WUPHF.com',
             'Schrute Farms',
             'Serenity by Jan',
+            'Mike\'s Cereal Shack',
         ];
     }
 }
