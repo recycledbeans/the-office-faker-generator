@@ -1,6 +1,6 @@
 # The Office Faker Generator (Provider)
 
-[![Latest Stable Version](https://poser.pugx.org/recycledbeans/the-office-faker/version)](https://packagist.org/packages/recycledbeans/the-office-faker) [![Build Status](https://travis-ci.org/recycledbeans/the-office-faker-generator.svg?branch=master)](https://travis-ci.org/recycledbeans/the-office-faker-generator) [![StyleCI](https://github.styleci.io/repos/246913160/shield?branch=master&style=plastic)](https://github.styleci.io/repos/246913160)
+[![Latest Stable Version](https://poser.pugx.org/recycledbeans/the-office-faker/version)](https://packagist.org/packages/recycledbeans/the-office-faker) [![Build Status](https://travis-ci.org/recycledbeans/the-office-faker-generator.svg?branch=master)](https://travis-ci.org/recycledbeans/the-office-faker-generator) [![StyleCI](https://github.styleci.io/repos/246913160/shield?branch=master)](https://github.styleci.io/repos/246913160)
 
 ## Bears. Beets. Battlestar Galactica.
 
