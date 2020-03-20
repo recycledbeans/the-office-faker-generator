@@ -3,8 +3,8 @@
 use Faker\Generator as Faker;
 use PHPUnit\Framework\TestCase;
 use TheOfficeFaker\Data\Companies;
-use TheOfficeFaker\Data\MaleNames;
 use TheOfficeFaker\Data\FemaleNames;
+use TheOfficeFaker\Data\MaleNames;
 use TheOfficeFaker\Provider\TheOffice;
 
 final class TheOfficeTest extends TestCase
@@ -59,10 +59,10 @@ final class TheOfficeTest extends TestCase
         $character = $this->faker->character();
         $firstName = explode(' ', $character->name)[0];
         $lastName = explode(' ', $character->name)[1];
-        $emailName = strtolower($firstName). '.' . strtolower($lastName);
+        $emailName = strtolower($firstName).'.'.strtolower($lastName);
 
         $this->assertTrue(strpos($character->safeEmail, $emailName) >= 0);
-        $this->assertTrue(!!strpos($character->safeEmail, '@example.net') >= 0);
+        $this->assertTrue((bool) strpos($character->safeEmail, '@example.net') >= 0);
     }
 
     public function testCanGetACharacterEmail()
@@ -70,7 +70,7 @@ final class TheOfficeTest extends TestCase
         $character = $this->faker->character();
         $firstName = explode(' ', $character->name)[0];
         $lastName = explode(' ', $character->name)[1];
-        $emailName = strtolower($firstName). '.' . strtolower($lastName);
+        $emailName = strtolower($firstName).'.'.strtolower($lastName);
 
         $this->assertEquals("{$emailName}@dunder-mifflin.com", $character->email);
     }

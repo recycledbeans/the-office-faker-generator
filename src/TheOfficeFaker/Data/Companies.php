@@ -4,7 +4,6 @@ namespace TheOfficeFaker\Data;
 
 class Companies implements DataInterface
 {
-
     public static function get(): array
     {
         return [
