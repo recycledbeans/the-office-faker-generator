@@ -61,8 +61,8 @@ final class TheOfficeTest extends TestCase
         $lastName = explode(' ', $character->name)[1];
         $emailName = strtolower($firstName). '.' . strtolower($lastName);
 
-        $this->assertStringContainsString($emailName, $character->safeEmail);
-        $this->assertStringContainsString('@example.net', $character->safeEmail);
+        $this->assertTrue(strpos($character->safeEmail, $emailName) >= 0);
+        $this->assertTrue(!!strpos($character->safeEmail, '@example.net') >= 0);
     }
 
     public function testCanGetACharacterEmail(): void
