@@ -15,7 +15,7 @@ final class TheOfficeTest extends TestCase
     private $faker;
     private $names;
 
-    public function setUp(): void
+    public function setUp()
     {
         parent::setUp();
         $this->faker = new Faker();
@@ -23,22 +23,22 @@ final class TheOfficeTest extends TestCase
         $this->names = array_merge(MaleNames::get(), FemaleNames::get());
     }
 
-    public function testNameReturnsANameFromTheKnownListOfNames(): void
+    public function testNameReturnsANameFromTheKnownListOfNames()
     {
         $this->assertContains($this->faker->name, $this->names);
     }
 
-    public function testCompanyReturnsACompanyNameFromTheKnownListOfCompanies(): void
+    public function testCompanyReturnsACompanyNameFromTheKnownListOfCompanies()
     {
         $this->assertContains($this->faker->company, Companies::get());
     }
 
-    public function testCanGetACharacterName(): void
+    public function testCanGetACharacterName()
     {
         $this->assertContains($this->faker->character()->name, $this->names);
     }
 
-    public function testCanGetACharacterFirstName(): void
+    public function testCanGetACharacterFirstName()
     {
         $character = $this->faker->character();
 
@@ -46,7 +46,7 @@ final class TheOfficeTest extends TestCase
         $this->assertEquals($firstName, $character->firstName);
     }
 
-    public function testCanGetACharacterLastName(): void
+    public function testCanGetACharacterLastName()
     {
         $character = $this->faker->character();
 
@@ -65,7 +65,7 @@ final class TheOfficeTest extends TestCase
         $this->assertTrue(!!strpos($character->safeEmail, '@example.net') >= 0);
     }
 
-    public function testCanGetACharacterEmail(): void
+    public function testCanGetACharacterEmail()
     {
         $character = $this->faker->character();
         $firstName = explode(' ', $character->name)[0];
@@ -75,7 +75,7 @@ final class TheOfficeTest extends TestCase
         $this->assertEquals("{$emailName}@dunder-mifflin.com", $character->email);
     }
 
-    public function testCanGetAFemaleCharacter(): void
+    public function testCanGetAFemaleCharacter()
     {
         $character = $this->faker->characterFemale();
 
@@ -83,7 +83,7 @@ final class TheOfficeTest extends TestCase
         $this->assertNotContains($character->name, MaleNames::get());
     }
 
-    public function testCanGetAMaleCharacter(): void
+    public function testCanGetAMaleCharacter()
     {
         $character = $this->faker->characterMale();
 
