@@ -72,6 +72,22 @@ Office. You can use these the same way you would use the normal company attribut
 $company = $faker->company; 
 ```
 
+### Running unit test
+
+This project uses PHPUnit. You can run tests with or without code coverage.
+
+With no code coverage
+```bash
+./vendor/bin/phpunit
+```
+
+With code coverage (you must have Xdebug installed to run code coverage)
+```bash
+./vendor/bin/phpunit --coverage-html tests/coverage
+```
+
+To view the code coverage report open `tests/coverage/index.html` in your browser.
+
 ### Identified Areas of Improvement (I would love your help!)
 
 There is a short list of things I would like to improve or add in the near future to make this provider even better. If 
