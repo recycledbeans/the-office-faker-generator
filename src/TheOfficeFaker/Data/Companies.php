@@ -20,6 +20,10 @@ class Companies implements DataInterface
             'Schrute Farms',
             'Serenity by Jan',
             'Mike\'s Cereal Shack',
+            'Vance Refrigeration',
+            'Scranton White Pages',
+            'Poor Richard\'s Pub',
+            'Sandals Jamaica',
         ];
     }
 }
