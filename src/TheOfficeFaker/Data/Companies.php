@@ -24,6 +24,8 @@ class Companies implements DataInterface
             'Scranton White Pages',
             'Poor Richard\'s Pub',
             'Sandals Jamaica',
+            'Pizza by Alfredo',
+            'Alfredo\'s Pizza Cafe',
         ];
     }
 }
