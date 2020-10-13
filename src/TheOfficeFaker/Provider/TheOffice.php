@@ -47,22 +47,6 @@ class TheOffice extends Base
         return $this->getFirstNameComponent($this->getOfficePerson('male'));
     }
 
-    protected function getOfficePerson($sex = 'both')
-    {
-        switch ($sex) {
-            case 'male':
-                $employees = $this->maleNames;
-                break;
-            case 'female':
-                $employees = $this->femaleNames;
-                break;
-            default:
-                $employees = array_merge($this->maleNames, $this->femaleNames);
-        }
-
-        return Base::randomElement($employees);
-    }
-
     public function characterFemale()
     {
         return $this->character('female');
@@ -71,13 +55,6 @@ class TheOffice extends Base
     public function characterMale()
     {
         return $this->character('male');
-    }
-
-    protected function getLastNameComponent($value)
-    {
-        $name = explode(' ', $value);
-
-        return array_reverse($name)[0];
     }
 
     public function getFirstNameComponent($value)
@@ -89,7 +66,7 @@ class TheOffice extends Base
 
     public function character($sex = 'both')
     {
-        $person = new \stdClass;
+        $person = new \stdClass();
 
         $name = $this->getOfficePerson($sex);
 
@@ -110,5 +87,30 @@ class TheOffice extends Base
     public function companyName()
     {
         return Base::randomElement($this->companies);
+    }
+
+    protected function getOfficePerson($sex = 'both')
+    {
+        switch ($sex) {
+            case 'male':
+                $employees = $this->maleNames;
+
+                break;
+            case 'female':
+                $employees = $this->femaleNames;
+
+                break;
+            default:
+                $employees = array_merge($this->maleNames, $this->femaleNames);
+        }
+
+        return Base::randomElement($employees);
+    }
+
+    protected function getLastNameComponent($value)
+    {
+        $name = explode(' ', $value);
+
+        return array_reverse($name)[0];
     }
 }
