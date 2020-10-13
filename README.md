@@ -10,7 +10,7 @@ the hit TV series, The Office (US).
 
 This is vital for when we launch Dunder Mifflin Infinity ✌️-point-👌!
 
-### Installation
+## Installation
 
 Install this package using Composer.
 
@@ -18,7 +18,7 @@ Install this package using Composer.
 composer require recycledbeans/the-office-faker
 ```
 
-### Usage
+## Usage
 
 Start using characters and company names immediately using the Faker methods you are already familiar with by adding
 the provider to your Faker instance.
@@ -34,13 +34,13 @@ $name = $faker->character()->name; // Dwight Schrute
 $company = $faker->company; // Poor Richard's Pub
 ```
 
-#### 🔥 Laravel
+### 🔥 Laravel
 
 If you are using this package in a Laravel application, you can also make this functionality available to all of 
 your factories and tests globally by adding the `TheOfficeFaker\Laravel\TheOfficeServiceProvider::class` to 
 the `providers` section of `config/app.php` as detailed in the [Laravel Docs](https://laravel.com/docs/8.x/providers#registering-providers).
 
-### Characters
+## Characters
 
 The default usage above creates truly randomized first and last names, so you will end up with names like "Roy Kapoor" or
 "Jim Schrute". If you would like the have the first and last names be consistent with the characters on the show (which 
@@ -58,7 +58,7 @@ return [
 
 ```
 
-### Companies
+## Companies
 
 There is a small, but growing, list of fictional (and some Scranton-area) company names taken from episodes of The 
 Office. You can use these the same way you would use the normal company attribute.
@@ -67,6 +67,8 @@ Office. You can use these the same way you would use the normal company attribut
 // Michael Scott Paper Company, for instance
 $company = $faker->company; 
 ```
+
+## Contributing
 
 ### Running unit tests
 
