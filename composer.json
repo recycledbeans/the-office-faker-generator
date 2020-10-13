@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "TheOffice\\Laravel\\ServiceProvider"
+                "TheOfficeFaker\\Laravel\\ServiceProvider"
             ]
         }
     }
