@@ -34,7 +34,7 @@ $name = $faker->character()->name; // Dwight Schrute
 $company = $faker->company; // Poor Richard's Pub
 ```
 
-#### Laravel
+#### 🔥 Laravel
 
 If you are using this package in a Laravel application, you can also make this functionality available to all of 
 your factories and tests globally by adding the `TheOfficeFaker\Laravel\TheOfficeServiceProvider::class` to 
