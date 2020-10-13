@@ -26,12 +26,12 @@ the provider to your Faker instance.
 The example below is using a Laravel Factory as an example, but Faker (and this provider) can be used in any PHP project.
 
 ```php
-    $faker = Faker\Factory::create();
-    $faker->addProvider(new \TheOfficeFaker\Provider\TheOffice($faker));
+$faker = Faker\Factory::create();
+$faker->addProvider(new \TheOfficeFaker\Provider\TheOffice($faker));
 
-    // Example usage (more details below)
-    $name = $faker->character()->name; // Dwight Schrute
-    $company = $faker->company; // Poor Richard's Pub
+// Example usage (more details below)
+$name = $faker->character()->name; // Dwight Schrute
+$company = $faker->company; // Poor Richard's Pub
 ```
 
 #### Laravel
@@ -48,19 +48,13 @@ is probably what most people would enjoy), you can use the character() method to
 
 ```php
 
-$factory->define(Volunteer::class, function (Faker $faker) {
+$character = $faker->character();
 
-    // Add the TheOffice Provider so Faker starts using the methods within the provider
-    $faker->addProvider(new \TheOfficeFaker\Provider\TheOffice($faker));
-
-    $character = $faker->character();
-
-    return [
-        'given_name' => $character->firstName,
-        'family_name' => $character->lastName,
-        'email' => $character->safeEmail,
-    ];
-});
+return [
+    'given_name' => $character->firstName,
+    'family_name' => $character->lastName,
+    'email' => $character->safeEmail,
+];
 
 ```
 
