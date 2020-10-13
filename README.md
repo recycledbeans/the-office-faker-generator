@@ -1,16 +1,16 @@
-# The Office Faker Generator (Provider)
+# The Office Faker
 
-[![Latest Stable Version](https://poser.pugx.org/recycledbeans/the-office-faker/version)](https://packagist.org/packages/recycledbeans/the-office-faker) [![Build Status](https://travis-ci.org/recycledbeans/the-office-faker-generator.svg?branch=master)](https://travis-ci.org/recycledbeans/the-office-faker-generator) [![StyleCI](https://github.styleci.io/repos/246913160/shield?branch=master)](https://github.styleci.io/repos/246913160)
+[![Latest Stable Version](https://poser.pugx.org/recycledbeans/the-office-faker/version)](https://packagist.org/packages/recycledbeans/the-office-faker) [![Build Status](https://travis-ci.org/recycledbeans/the-office-faker-generator.svg?branch=master)](https://travis-ci.org/recycledbeans/the-office-faker-generator) 
 
 ## Bears. Beets. Battlestar Galactica.
 
 With this package, you can extend the extremely useful Faker ([fzaninotto/faker](https://github.com/fzaninotto/Faker)) 
-Library to seed your application with fake data using characters, companies, (and in a future release) locations from 
+Library to seed your PHP application with fake data using characters and companies from 
 the hit TV series, The Office (US).
 
-This is vital for when we launch Dunder Mifflin Infinity #2PointOh!
+This is vital for when we launch Dunder Mifflin Infinity ✌️-point-👌!
 
-### Installation
+## Installation
 
 Install this package using Composer.
 
@@ -18,29 +18,29 @@ Install this package using Composer.
 composer require recycledbeans/the-office-faker
 ```
 
-### Usage
+## Usage
 
-Start using characters and company names immediately using the Faker methods you are already familiar with. The
-example below is using a Laravel Factory as an example, but Faker (and this provider) can be used in so many other ways
-and in any other framework.
+Start using characters and company names immediately using the Faker methods you are already familiar with by adding
+the provider to your Faker instance.
+
+The example below is using a Laravel Factory as an example, but Faker (and this provider) can be used in any PHP project.
 
 ```php
+$faker = Faker\Factory::create();
+$faker->addProvider(new \TheOfficeFaker\Provider\TheOffice($faker));
 
-$factory->define(Volunteer::class, function (Faker $faker) {
-
-    // Add the TheOffice Provider so Faker starts using the methods within the provider
-    $faker->addProvider(new \TheOfficeFaker\Provider\TheOffice($faker));
-
-    return [
-        'given_name' => $faker->firstName,
-        'family_name' => $faker->lastName,
-        'email' => $faker->safeEmail,
-    ];
-});
-
+// Example usage (more details below)
+$name = $faker->character()->name; // Dwight Schrute
+$company = $faker->company; // Poor Richard's Pub
 ```
 
-### Characters
+### 🔥 Laravel
+
+If you are using this package in a Laravel application, you can also make this functionality available to all of 
+your factories and tests globally by adding the `TheOfficeFaker\Laravel\TheOfficeServiceProvider::class` to 
+the `providers` section of `config/app.php` as detailed in the [Laravel Docs](https://laravel.com/docs/8.x/providers#registering-providers).
+
+## Characters
 
 The default usage above creates truly randomized first and last names, so you will end up with names like "Roy Kapoor" or
 "Jim Schrute". If you would like the have the first and last names be consistent with the characters on the show (which 
@@ -48,23 +48,17 @@ is probably what most people would enjoy), you can use the character() method to
 
 ```php
 
-$factory->define(Volunteer::class, function (Faker $faker) {
+$character = $faker->character();
 
-    // Add the TheOffice Provider so Faker starts using the methods within the provider
-    $faker->addProvider(new \TheOfficeFaker\Provider\TheOffice($faker));
-
-    $character = $faker->character();
-
-    return [
-        'given_name' => $character->firstName,
-        'family_name' => $character->lastName,
-        'email' => $character->safeEmail,
-    ];
-});
+return [
+    'given_name' => $character->firstName,
+    'family_name' => $character->lastName,
+    'email' => $character->safeEmail,
+];
 
 ```
 
-### Companies
+## Companies
 
 There is a small, but growing, list of fictional (and some Scranton-area) company names taken from episodes of The 
 Office. You can use these the same way you would use the normal company attribute.
@@ -74,7 +68,9 @@ Office. You can use these the same way you would use the normal company attribut
 $company = $faker->company; 
 ```
 
-### Running unit test
+## Contributing
+
+### Running unit tests
 
 This project uses PHPUnit. You can run tests with or without code coverage.
 
@@ -90,7 +86,11 @@ With code coverage (you must have Xdebug installed to run code coverage)
 
 To view the code coverage report open `tests/coverage/index.html` in your browser.
 
-### Identified Areas of Improvement (I would love your help!)
+### Ideas
+
+Do you have ideas for other bits of data that you would like to see in this package? Create an issue with your suggestion!
+
+### TODO (I would love your help!)
 
 There is a short list of things I would like to improve or add in the near future to make this provider even better. If 
 you would like to help in this endeavor, please feel free to create a pull request. Even if you don't feel like coding, 
@@ -101,3 +101,7 @@ added for even more variability.
 - Cities and localities: I don't know if there will be enough cities mentioned in the office (mostly from the PA area), 
 but I think it's worth looking into whether the provider can _provide_ enough cities to have them added.
 - Lines from the episodes? Maybe a text provider that returns a random sentence from an actual line of dialog?
+
+---
+
+Follow me on [Twitter](https://twitter.com/recycledbeans)!
