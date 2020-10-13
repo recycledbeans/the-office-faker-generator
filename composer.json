@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Barryvdh\\Debugbar\\ServiceProvider"
+                "TheOffice\\Laravel\\ServiceProvider"
             ]
         }
     }
