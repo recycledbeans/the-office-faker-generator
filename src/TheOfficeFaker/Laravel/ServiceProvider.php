@@ -12,6 +12,7 @@ class ServiceProvider extends ServiceProvider
         app()->bind(Generator::class, function ($app) {
             $faker = new Generator();
             $faker->addProvider(new TheOffice($faker));
+
             return $faker;
         });
     }
