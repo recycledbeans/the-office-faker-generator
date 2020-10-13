@@ -4,6 +4,7 @@ namespace TheOfficeFaker\Laravel;
 
 use Faker\Generator;
 use Illuminate\Support\ServiceProvider;
+use TheOfficeFaker\Provider\TheOffice;
 
 class ServiceProvider extends ServiceProvider
 {
