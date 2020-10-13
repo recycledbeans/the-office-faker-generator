@@ -101,3 +101,7 @@ added for even more variability.
 - Cities and localities: I don't know if there will be enough cities mentioned in the office (mostly from the PA area), 
 but I think it's worth looking into whether the provider can _provide_ enough cities to have them added.
 - Lines from the episodes? Maybe a text provider that returns a random sentence from an actual line of dialog?
+
+---
+
+Follow me on [Twitter](https://twitter.com/recycledbeans)!
