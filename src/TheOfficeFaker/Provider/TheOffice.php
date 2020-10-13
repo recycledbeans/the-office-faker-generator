@@ -5,8 +5,8 @@ namespace TheOfficeFaker\Provider;
 use Faker\Generator;
 use Faker\Provider\Base;
 use TheOfficeFaker\Data\Companies;
-use TheOfficeFaker\Data\MaleNames;
 use TheOfficeFaker\Data\FemaleNames;
+use TheOfficeFaker\Data\MaleNames;
 
 class TheOffice extends Base
 {
@@ -73,8 +73,8 @@ class TheOffice extends Base
         $person->name = $name;
         $person->firstName = $this->getFirstNameComponent($name);
         $person->lastName = $this->getLastNameComponent($name);
-        $person->safeEmail = strtolower($person->firstName) . '.' . strtolower($person->lastName) . rand(0, 9999) . '@example.net';
-        $person->email = strtolower($person->firstName) . '.' . strtolower($person->lastName) . '@dunder-mifflin.com';
+        $person->safeEmail = strtolower($person->firstName).'.'.strtolower($person->lastName).rand(0, 9999).'@example.net';
+        $person->email = strtolower($person->firstName).'.'.strtolower($person->lastName).'@dunder-mifflin.com';
 
         return $person;
     }
