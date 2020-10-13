@@ -25,12 +25,5 @@
     },
     "require-dev": {
         "phpunit/phpunit": "6.5.14"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "TheOfficeFaker\\Laravel\\TheOfficeServiceProvider"
-            ]
-        }
     }
 }
