@@ -26,6 +26,11 @@ class Companies implements DataInterface
             'Sandals Jamaica',
             'Pizza by Alfredo',
             'Alfredo\'s Pizza Cafe',
+            'W.B. Jones Heating & Air',
+            'Dwight Schrute\'s Gym for Muscles',
+            'Sesame Avenue Daycare Center for Infants and Toddlers',
+            'Cress Tool & Die',
+            'Disaster Kits Limited',
         ];
     }
 }
