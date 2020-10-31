@@ -3,8 +3,8 @@
 namespace TheOfficeFaker\Laravel;
 
 use Faker\Generator;
-use TheOfficeFaker\Provider\TheOffice;
 use Illuminate\Support\ServiceProvider;
+use TheOfficeFaker\Provider\TheOffice;
 
 class TheOfficeServiceProvider extends ServiceProvider
 {
