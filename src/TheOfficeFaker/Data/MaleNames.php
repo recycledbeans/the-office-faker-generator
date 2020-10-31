@@ -48,6 +48,9 @@ class MaleNames implements DataInterface
             'Bob Vance',
             'Hank Tate',
             'Billy Merchant',
+            'Paul Faust',
+            'W.B. Jones',
+            'Bill Cress',
         ];
     }
 }
