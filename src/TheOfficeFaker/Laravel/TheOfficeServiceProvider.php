@@ -14,7 +14,11 @@ class TheOfficeServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $faker = $this->app->make(Generator::class);
-        $faker->addProvider(new TheOffice($faker));
+        $this->app->bind('Faker\Generator', function () {
+            $factory = Factory::create(config('app.faker_locale'));
+            $factory->addProvider(new TheOffice($factory));
+
+            return $factory;
+        });
     }
 }
