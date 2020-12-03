@@ -2,7 +2,7 @@
 
 namespace TheOfficeFaker\Laravel;
 
-use Faker\Generator;
+use Faker\Factory;
 use TheOfficeFaker\Provider\TheOffice;
 use Illuminate\Support\ServiceProvider;
 
